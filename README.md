@@ -13,7 +13,7 @@ pip install simple-choices
 >>>    image = 'It is image'
 >>>
 >>> AttachmentType.choices
-(('media', 'Media'), ('image', 'Image'))
+(('video', 'It is video'), ('image', 'It is image'))
 >>> Attachment.video
 'video'
 ```
@@ -22,4 +22,7 @@ So it's simple to use with Django.
 class Attachment(django.db.models.Model):
     attachment_type = django.db.models.CharField(
     	choices=AttachmentType.choices, max_length=32)
+
+
+Attachment.objects.filter(attachment_type=AttachmentType.video)
 ```
