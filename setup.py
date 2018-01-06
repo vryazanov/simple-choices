@@ -11,8 +11,7 @@ setup(
     name="simple-choices",
     version=simple_choices.__version__,
     packages=('simple_choices',),
-
-
+    install_requires=('six',),
     author="Vadim Ryazanov",
     author_email="vadimvoronezh@ya.ru",
     description="Classes which make working with django choices simpler",
